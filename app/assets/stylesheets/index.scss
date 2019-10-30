@@ -1,0 +1,95 @@
+@import "bootstrap";
+@import url("https://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css");
+
+body {
+  background-color: #b8b5ae;
+}
+
+a {
+  font-family: 'Nunito', sans-serif;
+}
+
+.jumbotron {
+  text-align: center;
+  color: white;
+  background: url('https://images.unsplash.com/photo-1460317442991-0ec209397118?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80');
+  background-color: rgba(0,0,0,1.0);
+  font-family: 'Nunito', sans-serif;
+  font-weight: bold;
+  text-shadow: 2px 2px black;
+}
+
+.carousel-item img {
+  height: 35em;
+  width: 100%;
+  object-fit: cover;
+}
+
+#slide-1 {
+    p {
+      font-weight: normal;
+      font-size: 20px;
+    }
+  font-size: 15px;
+  color: black;
+  text-shadow: 1px 1px grey;
+  text-align: left;
+  padding-bottom: 23em;
+  padding-left: 16em;
+}
+
+#slide-2 {
+    p {
+      font-weight: normal;
+      font-size: 20px;
+    }
+  color: black;
+  text-shadow: 1px 1px grey;
+  text-align: left;
+  padding-bottom: 9em;
+  padding-left: 38em;
+}
+
+#header {
+  color: #B2B2A2;
+}
+
+i {
+  font-size: 4.20em;
+}
+
+#type-buttons {
+  align-self: center;
+}
+
+.type-plumbing {
+  border-style: solid;
+  border-width: thin;
+  border-radius: 20%;
+  text-align: center;
+  background-color: #0c98ab;
+}
+
+.type-electric {
+  border-style: solid;
+  border-width: thin;
+  border-radius: 20%;
+  text-align: center;
+  background-color: yellow;
+}
+
+.type-hvac {
+  border-style: solid;
+  border-width: thin;
+  border-radius: 20%;
+  text-align: center;
+  background-color: #088a29;
+}
+
+.type-capentry {
+  border-style: solid;
+  border-width: thin;
+  border-radius: 20%;
+  text-align: center;
+  background-color: #91680f;
+}
