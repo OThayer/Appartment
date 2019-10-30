@@ -20,6 +20,12 @@ a {
   padding-top: 5em;
 }
 
+.jumbotron-request {
+  background-image: url("https://images.unsplash.com/photo-1534190239940-9ba8944ea261?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2378&q=80");
+  height: 50em;
+  padding-top: 10em;
+}
+
 .carousel-item img {
   height: 35em;
   width: 100%;
@@ -72,6 +78,8 @@ padding-left: 38em;
   border-style: solid;
   margin-left: 25%;
   margin-right: 25%;
+  background-color: grey;
+  border-radius: 7%;
 }
 
 .cell {

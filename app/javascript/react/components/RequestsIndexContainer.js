@@ -68,9 +68,9 @@ const RequestsIndexContainer = props => {
     }
 
   return (
-    
-    <div class="jumbotron-request" img="https://images.unsplash.com/photo-1460317442991-0ec209397118?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80">
-    <div id="maintenance-form">
+
+    <div class="jumbotron-request">
+     <div id="maintenance-form">
       <div className="container col-md-auto" id="new-form">
         <div className="container" className="text-center">
           <h2>Maintenance Request</h2>

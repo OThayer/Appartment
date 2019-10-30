@@ -43,7 +43,7 @@ const Index = props => {
           <div class="carousel-caption d-none d-md-block" id="slide-2">
             <h3>Place maintenance requests right from your computer</h3>
             <p>Forget always being sent to voicemail, place work requests for plumbers, electricians, and more.</p>
-            <a className="btn btn-primary btn-lg" href="/requests" role="button">Learn more</a>
+            <a className="btn btn-primary btn-lg" href="/MaintenanceInfoPage" role="button">Learn more</a>
           </div>
         </div>
         <div className="carousel-item">
