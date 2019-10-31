@@ -9,14 +9,21 @@ a {
   font-family: 'Nunito', sans-serif;
 }
 
-.jumbotron {
+.jumbotron-index {
   text-align: center;
   color: white;
-  background: url('https://images.unsplash.com/photo-1460317442991-0ec209397118?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80');
-  background-color: rgba(0,0,0,1.0);
+  background-image: url('https://images.unsplash.com/photo-1460317442991-0ec209397118?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80');
   font-family: 'Nunito', sans-serif;
   font-weight: bold;
   text-shadow: 2px 2px black;
+  height: 20em;
+  padding-top: 5em;
+}
+
+.jumbotron-request {
+  background-image: url("https://images.unsplash.com/photo-1534190239940-9ba8944ea261?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2378&q=80");
+  height: 50em;
+  padding-top: 10em;
 }
 
 .carousel-item img {
@@ -50,12 +57,36 @@ a {
   padding-left: 38em;
 }
 
+#slide-3 {
+  p {
+    font-weight: normal;
+    font-size: 20px;
+  }
+color: black;
+text-shadow: 1px 1px grey;
+text-align: left;
+padding-bottom: 9em;
+padding-left: 38em;
+}
+
 #header {
   color: #B2B2A2;
 }
 
-i {
-  font-size: 4.20em;
+#maintenance-form {
+  align-self: center;
+  border-style: solid;
+  margin-left: 25%;
+  margin-right: 25%;
+  background-color: grey;
+  border-radius: 7%;
+}
+
+.cell {
+  h2 {
+    align-self: center;
+  }
+  align-content: center;
 }
 
 #type-buttons {
@@ -67,7 +98,6 @@ i {
   border-width: thin;
   border-radius: 20%;
   text-align: center;
-  background-color: #0c98ab;
 }
 
 .type-electric {
@@ -75,7 +105,6 @@ i {
   border-width: thin;
   border-radius: 20%;
   text-align: center;
-  background-color: yellow;
 }
 
 .type-hvac {
@@ -83,7 +112,6 @@ i {
   border-width: thin;
   border-radius: 20%;
   text-align: center;
-  background-color: #088a29;
 }
 
 .type-capentry {
@@ -91,5 +119,35 @@ i {
   border-width: thin;
   border-radius: 20%;
   text-align: center;
-  background-color: #91680f;
+}
+
+i {
+    font-size: 2em;
+  }
+
+#description {
+  padding-bottom: 4em;
+}
+
+#button-holder {
+  padding-left: 20em;
+}
+
+.buttons-hooray {
+  width: 5em;
+  display: inline-flex;
+  align-items: center;
+}
+
+textarea {
+  outline: none;
+  resize: none;
+}
+
+#text-field {
+  padding-left: 14.50em;
+}
+
+#maintenance-message {
+  text-align: center;
 }
