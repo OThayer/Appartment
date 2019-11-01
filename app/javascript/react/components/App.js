@@ -5,6 +5,7 @@ import RequestsIndexContainer from './RequestsIndexContainer'
 import MaintenanceInfoPage from './MaintenanceInfo'
 import Index from './index'
 import Payments from './Payments'
+import PaymentInfo from './PaymentInfo'
 
 export const App = (props) => {
   return (
@@ -13,7 +14,8 @@ export const App = (props) => {
         <Route exact path="/" component={Index}/>
         <Route exact path="/requests" component={RequestsIndexContainer}/>
         <Route exact path="/MaintenanceInfoPage" component={MaintenanceInfoPage}/>
-        <Route exact path="/Payments" component={Payments}/>
+        <Route exact path="/payments" component={Payments}/>
+        <Route exact path="/paymentsinfo" component={PaymentInfo}/>
       </Switch>
     </BrowserRouter>
   )

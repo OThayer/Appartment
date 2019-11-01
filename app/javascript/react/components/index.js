@@ -51,6 +51,7 @@ const Index = props => {
           <div class="carousel-caption d-none d-md-block" id="slide-3">
             <h3>Never Miss a Rent Payment Again</h3>
             <p>With Stripe, setting up automated payments has never been easier.</p>
+            <a className="btn btn-primary btn-lg" href="/paymentsinfo" role="button">Learn more</a>
           </div>
         </div>
       </div>
