@@ -2,8 +2,9 @@ import React, { useState, useEffect } from 'react';
 
 const MaintenanceInfoPage = props => {
   return (
-    <div>
-    <h1>Maintenance Info Page</h1>
+    <div id="maintenance-info">
+      <h1>No More Instant Voicemail. No More Uncertainty.</h1>
+      <h3>Habitate Makes Requesting Maintenance Easy</h3>
 
     </div>
   )
