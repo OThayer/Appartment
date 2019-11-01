@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+source 'https://code.stripe.com'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.5.0'
@@ -20,6 +21,8 @@ gem 'bootstrap', '~> 4.3.1'
 gem 'jbuilder', '~> 2.5'
 
 gem 'carrierwave', '~> 2.0'
+
+gem 'stripe', '~> 1.26.0'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password

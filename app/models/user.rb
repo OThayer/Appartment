@@ -11,4 +11,5 @@ class User < ApplicationRecord
   validates :email, presence: true, format: { with: URI::MailTo::EMAIL_REGEXP }
 
   has_many :requests
+  has_many :payments
 end
