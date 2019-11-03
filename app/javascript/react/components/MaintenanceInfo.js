@@ -6,6 +6,7 @@ const MaintenanceInfoPage = props => {
       <div>
         <h1>No More Instant Voicemail. No More Uncertainty.</h1>
         <h3>Habitate Makes Requesting Maintenance Easy</h3>
+        <hr/>
       </div>
       <div>
         <p>Making maintenance requests has never been easier than with Habitate. Simply

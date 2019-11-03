@@ -113,6 +113,7 @@ const RequestsIndexContainer = props => {
             <label htmlFor="description" id="description" value="description" >
               <textarea placeholder="Please leave a detailed description of what needs fixed" type="text" id="description" name="description" cols="70" onChange={handleChange}/>
               <input className="btn btn-primary" type="submit" value="Submit"/>
+              <input type="file" id="maintenance_pic"/>
             </label>
           </div>
         </form>
