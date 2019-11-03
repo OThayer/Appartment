@@ -1,7 +1,22 @@
-<%= form_for @payment do %>
-<script src="https://checkout.stripe.com/v2/checkout.js"
-  class="stripe-button"
-  data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-  data-description="<%= @payment.name %>"
-  data-amount="<%= @payment.price %>"></script>
-<% end %>
+
+<html>
+<head>
+  <title>Habitate</title>
+  <link href="https://fonts.googleapis.com/css?family=Staatliches&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/28583d262e.js" crossorigin="anonymous"></script>
+  <%= stylesheet_link_tag 'application', media: 'all' %>
+    <%= csrf_meta_tags %>
+</head>
+
+<body>
+  <div id="payent-page">
+    <h1>Make Your Payments Here!</h1>
+    <%= form_for @payment do %>
+    <script src="https://checkout.stripe.com/v2/checkout.js"
+      class="stripe-button"
+      data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+      data-description="<%= @payment.name %>"
+      data-amount="<%= @payment.price %>"></script>
+    <% end %>
+  </div>
+</body>

@@ -24,9 +24,9 @@ const Index = props => {
     <div>
       <div className="jumbotron-index">
         <h1 className="display-4">Hello {currentUser.first_name}!</h1>
-        <p className="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+        <p className="lead">Habitate is the best new property management application for tenants and landlords</p>
         <hr className="my-4"/>
-        <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+        <p>Simplify maintenance requests, monthly payments and document management in just a few clicks</p>
       </div>
 
     <div id="carousel" className="carousel slide carousel-fade" data-ride="carousel">

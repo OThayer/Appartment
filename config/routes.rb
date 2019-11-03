@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   root 'homes#index'
   get '/requests', to: 'homes#index'
   get '/MaintenanceInfoPage', to: 'homes#index'
-  get '/payments', to: 'payments#new'
+  get '/Payments', to: 'payments#new'
   get '/paymentsinfo', to: 'homes#index'
 
   devise_for :users

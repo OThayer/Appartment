@@ -14,7 +14,7 @@ export const App = (props) => {
         <Route exact path="/" component={Index}/>
         <Route exact path="/requests" component={RequestsIndexContainer}/>
         <Route exact path="/MaintenanceInfoPage" component={MaintenanceInfoPage}/>
-        <Route exact path="/payments" component={Payments}/>
+        <Route exact path="/Payments" component={Payments}/>
         <Route exact path="/paymentsinfo" component={PaymentInfo}/>
       </Switch>
     </BrowserRouter>
