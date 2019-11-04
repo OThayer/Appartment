@@ -7,16 +7,10 @@ class PaymentsController < ApplicationController
   end
 
   def create
-    @payment = Payment.new(payment_params)
+    @payment = Payment.new()
     @payment.user = current_user
     @payment.save
-    respond_with(@payment)
+    flash.now[:notice] = "Your Payment Was Successful!"
   end
-
-  private
-  def payment_params
-    params.require(:payment).permit(:description, :name, :permalink, :price)
-  end
-
 
 end

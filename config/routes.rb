@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get '/MaintenanceInfoPage', to: 'homes#index'
   get '/Payments', to: 'payments#new'
   get '/paymentsinfo', to: 'homes#index'
+  get '/mydocuments', to: 'homes#index'
 
   devise_for :users
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

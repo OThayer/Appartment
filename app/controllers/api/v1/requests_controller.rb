@@ -5,19 +5,19 @@ class Api::V1::RequestsController < ApiController
   end
 
   def create
-    new_request = Request.new(request_params)
-    new_request.user = current_user
-    if new_request.save
-      render json: new_request
-    else
-      render json: {'errors': new_request.errors.full_messages}
+    request = Request.new(
+      work_type: params[:work_type],
+      description: params[:description],
+      maintenance_pic: params[:maintenance_pic]
+    )
+    request.user = current_user
+    if request.save
+        render json: request
+      else
+        render json: {
+          errors: request.errors.messages,
+          fields: request
+        }
+      end
     end
   end
-
-  private
-
-  def request_params
-    params.require(:request).permit(:work_type, :description)
-  end
-
-end
