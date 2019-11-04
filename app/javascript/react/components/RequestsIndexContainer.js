@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import Dropzone from 'react-dropzone'
 
 const RequestsIndexContainer = props => {
+  const [photoUpload, setPhotoUpload] = useState([])
   const [newRequest, setNewRequest] = useState({
     work_type: "",
     description: ""
@@ -14,6 +16,14 @@ const RequestsIndexContainer = props => {
     })
   }
 
+  const onDrop = (file) => {
+    if(file.length == 1) {
+      setPhotoUpload(file)
+    } else {
+      setMessage("You can only upload 1 photo")
+    }
+  }
+
   const handleChange = event => {
   setNewRequest({
     ...newRequest,
@@ -21,15 +31,15 @@ const RequestsIndexContainer = props => {
   })
  }
 
- const onRequestSubmitted = (payload) => {
-    fetch(`/api/v1/requests`, {
+ const onRequestSubmitted = event => {
+      let submittedFields = new FormData()
+      submittedFields.append("work_type", newRequest.work_type)
+      submittedFields.append("description", newRequest.description)
+      submittedFields.append("maintenance_pic", photoUpload[0])
+    fetch(`/api/v1/requests.json`, {
       method: 'POST',
       credentials: "same-origin",
-      headers: {
-          'Accept': 'application/json',
-          'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(payload)
+      body: submittedFields
     })
     .then(response => {
       if (response.ok) {
@@ -42,16 +52,6 @@ const RequestsIndexContainer = props => {
       return body.json()
     })
     .catch(error => console.error(`Error in fetch: ${error.message}`))
-    }
-
-    const onSubmitHandler = (event) => {
-      event.preventDefault()
-      onRequestSubmitted(payload)
-    }
-
-    let payload = {
-      work_type: newRequest.work_type,
-      description: newRequest.description
     }
 
     let maintenanceType = ""
@@ -68,8 +68,7 @@ const RequestsIndexContainer = props => {
     }
 
   return (
-
-    <div class="jumbotron-request">
+    <div className="jumbotron-request">
      <div id="maintenance-form">
       <div className="container col-md-auto" id="new-form">
         <div className="container" className="text-center">
@@ -78,7 +77,7 @@ const RequestsIndexContainer = props => {
         <div className="cell">
         </div>
         <div className="container" id="type-buttons">
-          <form className="callout" onSubmit={onSubmitHandler}>
+          <form className="callout" onSubmit={onRequestSubmitted}>
             <label htmlFor="work-type" className="buttons">
             <div id="button-holder">
               <div className="buttons-hooray">
@@ -111,9 +110,40 @@ const RequestsIndexContainer = props => {
           <h4 id="maintenance-message">{maintenanceType}</h4>
           <div id="text-field">
             <label htmlFor="description" id="description" value="description" >
-              <textarea placeholder="Please leave a detailed description of what needs fixed" type="text" id="description" name="description" cols="70" onChange={handleChange}/>
+              <textarea placeholder="Please leave a detailed description of what needs fixed"
+              type="text"
+              id="description"
+              name="description"
+              cols="70"
+              onChange={handleChange}/>
+
+              <div>
+              <section>
+                  <div className="dropzone">
+                    <Dropzone
+                      className=""
+                      multiple={false}
+                      onDrop={file => onDrop(file)}
+                    >
+                      {({getRootProps, getInputProps}) => (
+                          <div {...getRootProps()}>
+                            <input {...getInputProps()} />
+                            <p>Click to upload photo / Drop your photo here</p>
+                          </div>
+                      )}
+                    </Dropzone>
+                  </div>
+                  <aside>
+                    <ul>
+                      {
+                        photoUpload.map(file => <li key={file.name}>{file.name} - {file.size} bytes</li>)
+                      }
+                    </ul>
+                  </aside>
+                </section>
+                </div>
+
               <input className="btn btn-primary" type="submit" value="Submit"/>
-              <input type="file" id="maintenance_pic"/>
             </label>
           </div>
         </form>

@@ -6,6 +6,7 @@ import MaintenanceInfoPage from './MaintenanceInfo'
 import Index from './index'
 import Payments from './Payments'
 import PaymentInfo from './PaymentInfo'
+import MyDocuments from './MyDocuments'
 
 export const App = (props) => {
   return (
@@ -16,6 +17,7 @@ export const App = (props) => {
         <Route exact path="/MaintenanceInfoPage" component={MaintenanceInfoPage}/>
         <Route exact path="/Payments" component={Payments}/>
         <Route exact path="/paymentsinfo" component={PaymentInfo}/>
+        <Route exact path="/mydocuments" component={MyDocuments}/>
       </Switch>
     </BrowserRouter>
   )

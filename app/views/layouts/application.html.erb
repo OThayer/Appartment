@@ -17,6 +17,9 @@
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="right" style="list-style-type: none; display: inline-flex;">
       <%- if current_user -%>
+        <li><%= link_to 'My Documents', mydocuments_path %></li>
+        <li> <%= link_to 'Make a Payment', './payments/new' %></li>
+        <li><%= link_to 'Work Request', requests_path %></li>
         <li><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></li>
       <%- else -%>
         <li><%= link_to 'Sign Up', new_user_registration_path %></li>
