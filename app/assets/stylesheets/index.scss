@@ -196,3 +196,22 @@ textarea {
 .payment-info {
   text-align: center;
 }
+
+#my-requests {
+  text-align: center;
+}
+
+#my-requests-tile {
+  display: inline-flex;
+}
+
+#work-symbol {
+  float: left;
+  padding-right: 2em;
+  font-size: 28px;
+}
+
+#work-time {
+  font-size: 11px;
+  float: right;
+}

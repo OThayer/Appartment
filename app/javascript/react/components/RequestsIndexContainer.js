@@ -95,6 +95,7 @@ const RequestsIndexContainer = props => {
         description={request.description}
         worktype={request.work_type}
         userId={request.user_id}
+        time={request.review_date}
         />
     )
   })
