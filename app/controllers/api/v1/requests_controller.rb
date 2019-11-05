@@ -20,4 +20,9 @@ class Api::V1::RequestsController < ApiController
         }
       end
     end
+
+    def show
+    request = Request.find(params[:user_id])
+    render json: request, serializer: RequestSerializer
+  end
   end

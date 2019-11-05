@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import Dropzone from 'react-dropzone'
+import RequestTile from './RequestTile'
 
 const RequestsIndexContainer = props => {
   const [photoUpload, setPhotoUpload] = useState([])
+  const [requests, setRequests] = useState([])
   const [newRequest, setNewRequest] = useState({
     work_type: "",
     description: ""
@@ -67,15 +69,43 @@ const RequestsIndexContainer = props => {
       maintenanceType = "Looks like you have a miscellaneous issue..."
     }
 
+    useEffect(() => {
+    fetch('/api/v1/requests')
+    .then(response => {
+      if (response.ok) {
+        return response;
+      } else {
+        let errorMessage = `${response.status} (${response.statusText})`,
+            error = new Error(errorMessage);
+        throw(error);
+      }
+    })
+    .then(response => response.json())
+    .then(body => {
+      setRequests(body)
+    })
+    .catch(error => console.error(`Error in fetch: ${error.message}`))
+  }, [])
+
+  const RequestTiles = requests.map((request) => {
+    return(
+      <RequestTile
+        key={request.id}
+        id={request.id}
+        description={request.description}
+        worktype={request.work_type}
+        userId={request.user_id}
+        />
+    )
+  })
+
   return (
-    <div className="jumbotron-request">
      <div id="maintenance-form">
       <div className="container col-md-auto" id="new-form">
         <div className="container" className="text-center">
           <h2>Maintenance Request</h2>
         </div>
         <div className="cell">
-        </div>
         <div className="container" id="type-buttons">
           <form className="callout" onSubmit={onRequestSubmitted}>
             <label htmlFor="work-type" className="buttons">
@@ -149,8 +179,13 @@ const RequestsIndexContainer = props => {
         </form>
       </div>
     </div>
+    <h2 className="text-center">
+    My Requests
+    {RequestTiles}
+    </h2>
   </div>
-  </div>
+</div>
+
   )
 }
 
