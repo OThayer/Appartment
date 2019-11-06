@@ -1,7 +1,9 @@
 class Api::V1::RequestsController < ApiController
 
   def index
-    render json: Request.all
+    user = current_user
+    requests = user.requests
+    render json: requests
   end
 
   def create
