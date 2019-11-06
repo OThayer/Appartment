@@ -92,7 +92,7 @@ const RequestsIndexContainer = props => {
       <RequestTile
         key={request.id}
         id={request.id}
-        description={request.description}
+        description={request.desc_snip}
         worktype={request.work_type}
         userId={request.user_id}
         time={request.review_date}
@@ -180,10 +180,10 @@ const RequestsIndexContainer = props => {
         </form>
       </div>
     </div>
-    <h2 className="text-center">
+    <h2 className="text-center" id="my-requests">
     My Requests
-    {RequestTiles}
     </h2>
+    {RequestTiles}
   </div>
 </div>
 

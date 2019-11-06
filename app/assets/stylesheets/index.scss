@@ -4,6 +4,7 @@
 
 body {
   background-color: #b8b5ae;
+  font-family: 'Staatliches';
 }
 
 .navbar {
@@ -207,11 +208,23 @@ textarea {
 
 #work-symbol {
   float: left;
-  align-content: flex-start;
-  font-size: 28px;
+  font-size: 25px;
+  display: inline-flex;
 }
 
 #work-time {
   font-size: 11px;
-  float: right;
+  align-content: right;
+}
+
+#work-desc {
+  font-size: 13px;
+}
+
+#my-requests {
+  padding-bottom: 2em;
+}
+
+#payment-portal {
+  border: 1px;
 }

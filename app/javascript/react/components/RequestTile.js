@@ -17,17 +17,22 @@ const RequestTile = props => {
   }
 
   return(
-    <div className="cell small-12 large-6">
       <div className="card location-tile">
         <div className="card-section">
           <div id="my-requests-tile">
+          <div className="col md-4">
             <i className={workSymbol} id="work-symbol"></i>
-            <p>{props.description}</p>
-            <p  id="work-time" className="text-right">Submitted on: {props.time}</p>
+          </div>
+          <div className="col md-4">
+          <p  id="work-time">Submitted on: {props.time}</p>
+          <p>Seen: <i className="far fa-check-circle"></i></p>
+          </div>
+          <div className="col md-4" className="work-response">
+            <p id="work-desc">{props.description}</p>
+          </div>
           </div>
         </div>
       </div>
-    </div>
   )
 }
 
