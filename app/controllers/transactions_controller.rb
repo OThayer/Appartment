@@ -1,5 +1,4 @@
 class TransactionsController < ApplicationController
-    only: [:new, :create]
 
   def new
     @payment = Payment.find_by!(
