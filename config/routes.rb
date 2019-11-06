@@ -5,13 +5,12 @@ Rails.application.routes.draw do
   get '/Payments', to: 'payments#new'
   get '/paymentsinfo', to: 'homes#index'
   get '/mydocuments', to: 'homes#index'
-
   devise_for :users
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   namespace :api do
     namespace :v1 do
       resources :users, only: [ :index ]
-      resources :requests, only: [ :index, :create ]
+      resources :requests, only: [ :index, :create, :show ]
     end
   end
 

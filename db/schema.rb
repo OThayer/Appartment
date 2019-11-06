@@ -10,10 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_03_234430) do
+ActiveRecord::Schema.define(version: 2019_11_05_181134) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "documents", force: :cascade do |t|
+    t.string "title"
+    t.string "body"
+    t.bigint "tenant_id"
+    t.bigint "landlord_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["landlord_id"], name: "index_documents_on_landlord_id"
+    t.index ["tenant_id"], name: "index_documents_on_tenant_id"
+  end
 
   create_table "payments", force: :cascade do |t|
     t.string "name", default: "Rent", null: false
