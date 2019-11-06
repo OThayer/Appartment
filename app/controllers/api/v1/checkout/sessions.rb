@@ -1,5 +1,5 @@
 require 'stripe'
-Stripe.api_key = STRIPE_SECRET
+Stripe.api_key = ENV["STRIPE_SECRET"]
 
 Stripe::Checkout::Session.create({
   success_url: 'https://example.com/success',
