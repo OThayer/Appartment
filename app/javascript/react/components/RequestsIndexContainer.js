@@ -140,7 +140,7 @@ const RequestsIndexContainer = props => {
           </label>
           <h4 id="maintenance-message">{maintenanceType}</h4>
           <div id="text-field">
-            <label htmlFor="description" id="description" value="description" >
+            <label htmlFor="title" id="description" value="description" >
               <textarea placeholder="Please leave a detailed description of what needs fixed"
               type="text"
               id="description"

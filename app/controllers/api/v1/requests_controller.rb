@@ -13,6 +13,7 @@ class Api::V1::RequestsController < ApiController
       maintenance_pic: params[:maintenance_pic]
     )
     request.user = current_user
+    binding.pry
     if request.save
         render json: request
       else
