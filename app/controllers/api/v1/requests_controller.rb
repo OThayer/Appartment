@@ -7,13 +7,13 @@ class Api::V1::RequestsController < ApiController
   end
 
   def create
+    binding.pry
     request = Request.new(
       work_type: params[:work_type],
       description: params[:description],
       maintenance_pic: params[:maintenance_pic]
     )
     request.user = current_user
-    binding.pry
     if request.save
         render json: request
       else

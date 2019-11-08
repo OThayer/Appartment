@@ -7,6 +7,7 @@ class Api::V1::DocumentsController < ApiController
   end
 
   def create
+    binding.pry
     document = Document.new(
       title: params[:title],
       body: params[:body]
@@ -21,4 +22,6 @@ class Api::V1::DocumentsController < ApiController
         }
       end
     end
+
+
 end

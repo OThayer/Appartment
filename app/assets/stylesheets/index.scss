@@ -7,6 +7,10 @@ body {
   font-family: 'Staatliches';
 }
 
+footer {
+  background-color: #b8b5ae;
+}
+
 .navbar {
     a {
       font-size: 25px;
@@ -15,7 +19,7 @@ body {
     li {
       padding-left: 2em;
     }
-  height: 9em;
+  height: 7em;
   background-color: #4c384a;
 }
 
@@ -24,9 +28,9 @@ body {
 }
 
 #habitate {
-  font-size: 7em;
+  font-size: 4em;
   align-self: center;
-  padding-right: 3em;
+  padding-right: 8em;
   color: white;
   font-family: 'Staatliches';
 }
@@ -107,8 +111,10 @@ padding-left: 38em;
   border-style: solid;
   margin-left: 2%;
   margin-right: 2%;
-  background-color: white;
   border-radius: 7%;
+  padding-top: 3em;
+  background-color: #b3c6ff;
+  overflow: auto;
 }
 
 .cell {
@@ -189,9 +195,33 @@ textarea {
   padding-top: 2em;
 }
 
+.inline{
+  display: inline-flex;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
 #document-submit {
+  padding-top: 2em;
+  padding-bottom: 1.5em;
   text-align: center;
+  text-decoration: underline;
   background-color: white;
+}
+
+.document-title {
+  text-align: right;
+  background-color: white;
+  padding-right: 1em;
+}
+
+#list-of-files{
+  text-align: left;
+  font-size: 19px;
+}
+
+.list-group{
+  font-size: 33px;
 }
 
 .payment-info {
@@ -200,6 +230,11 @@ textarea {
 
 #my-requests {
   text-align: center;
+  background-color: #b3c6ff;
+}
+
+#maintenanceH2{
+  font-size: 28px;
 }
 
 #my-requests-tile {
@@ -226,5 +261,27 @@ textarea {
 }
 
 #payment-portal {
-  border: 1px;
+  padding-left: 20%;
+  padding-right: 20%;
+}
+
+#submit-button{
+  padding-bottom: 2em;
+}
+
+#payment-button-holder{
+  border: ridge;
+  padding-bottom: 1.5em;
+  background-color: white;
+}
+
+#stripe{
+  height: 40px;
+  width: 50px;
+}
+
+#make-payments{
+  color: white;
+  padding-top: 4em;
+  padding-bottom: 1em;
 }
