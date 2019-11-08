@@ -104,7 +104,7 @@ const RequestsIndexContainer = props => {
      <div id="maintenance-form">
       <div className="container col-md-auto" id="new-form">
         <div className="container" className="text-center">
-          <h2>Maintenance Request</h2>
+          <h1>Maintenance Request</h1>
         </div>
         <div className="cell">
         <div className="container" id="type-buttons">
@@ -183,6 +183,7 @@ const RequestsIndexContainer = props => {
     <h2 className="text-center" id="my-requests">
     My Requests
     </h2>
+    <hr/>
     {RequestTiles}
   </div>
 </div>

@@ -11,16 +11,19 @@
 <body>
   <div class="payment-info">
     <div>
-      <h1>Make Your Payments Here!</h1>
+      <h1 id="make-payments">Make Your Payments Here!</h1>
       <div id="payment-portal">
       <%= flash[:notice] %>
       <%= form_for @payment do %>
+      <div id="payment-button-holder">
+        <h3>Hi there <%= current_user.first_name %>!<br/> Making your rent payment is easy with Stripe!<br/> Simply enter your payment information below.</h3>
       <script src="https://checkout.stripe.com/v2/checkout.js"
         class="stripe-button"
         data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
         data-description="<%= @payment.name %>"
         data-amount="<%= @payment.price %>"></script>
       <% end %>
+      </div>
       </div>
     </div>
   </div>

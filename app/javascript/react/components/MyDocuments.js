@@ -49,10 +49,17 @@ const MyDocuments = props => {
   return(
     <div>
     <form className="callout" id="document-form" onSubmit={onDocumentSubmitted}>
-      <div id="document-submit">
-        <h1>Submit a Document</h1>
-        <h4 id="document-title">Title of Document</h4>
-        <div>
+      <div className="document-title">
+        <h1 id="document-submit">Submit a Document</h1>
+        <div className="inline">
+        <h4 id="list-of-files">When Uploading Documents:</h4>
+        <ul id="list-of-files">
+          <li>Make sure the title of the document is correct.</li>
+          <li>Before submitting, ensure all fields are filled out.</li>
+          <li>Acceptable file types: PDF, DOC, DOCX, DOT, XLS, XLSX, TXT, PPT, PPTX, HTM, HTML</li>
+        </ul>
+        <h4 className="document-title">Title of Document:</h4>
+        <div className="document-title">
           <label htmlFor="title" id="title" value="title">
           <textarea placeholder="Title of Document"
           type="text"
@@ -61,7 +68,7 @@ const MyDocuments = props => {
           onChange={handleChange}/>
           </label>
         </div>
-        <div>
+        <div class="document-title">
         <section>
             <div className="dropzone">
               <Dropzone
@@ -86,10 +93,11 @@ const MyDocuments = props => {
             </aside>
           </section>
           </div>
-          <div>
+        <div id="submit-button">
         <input className="btn btn-primary" type="submit" value="Submit"/>
-      </div>
-      </div>
+        </div>
+        </div>
+        </div>
       </form>
       <ul className="list-group">
         <li className="list-group-item active">Lease Agreement</li>
