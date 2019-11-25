@@ -19,8 +19,8 @@ Technologies/ APIs
 * Stripe API
 ---------------------
 How to use Habitate
-1 Visit https://habitate-app.herokuapp.com/
-2 Click on Sign Up if it's your first time using
+1.) Visit https://habitate-app.herokuapp.com/
+2.) Click on Sign Up if it's your first time using
 ---------------------
 TODO list
 * Allow easier sign-up process for landlords, including the ability to email invite links
