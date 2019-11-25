@@ -1,25 +1,29 @@
-# README
-https://app.codeship.com/projects/dbd26dc0-dbea-0137-30b9-0ef54a41ebbd/status?branch=master
+# Habitate
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Habitate Version 1.0 11/12/19
+Contributors: Oliver Thayer
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Habitate is a property management application for both landlords and tenants to use
+to streamline the rental experience. After signing up as a tenant, you have the ability
+to submit maintenance requests, upload pertinent documents, and make rental payments
+via the Stripe API.
+---------------------
+Technologies/ APIs
+* React 16.8.0
+* Ruby 2.5.0
+* Rails 6.0.0
+* Devise
+* ActiveRecord
+* React Dropzone
+* Carrierwave
+* Stripe API
+---------------------
+How to use Habitate
+1 Visit https://habitate-app.herokuapp.com/
+2 Click on Sign Up if it's your first time using
+---------------------
+TODO list
+* Allow easier sign-up process for landlords, including the ability to email invite links
+to tenants
+* Implement Google Maps API for landlords to locate maintenance specialists
+* Adjust Stripe API for official, non-test use for landlords
