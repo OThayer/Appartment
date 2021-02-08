@@ -20,7 +20,7 @@ gem 'bootstrap', '~> 4.3.1'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
 
-gem 'carrierwave', '~> 2.0'
+gem 'carrierwave', '~> 2.1'
 
 gem 'stripe', '~> 1.26.0'
 # Use Redis adapter to run Action Cable in production
